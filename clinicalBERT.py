@@ -53,7 +53,7 @@ def main():
     print(" Loading model...")
     model = AutoModelForTokenClassification.from_pretrained(MODEL_NAME, num_labels=len(LABEL_LIST))
 
-    print("⚙️ Setting up training...")
+    
     args = TrainingArguments(
         output_dir="./clinicalbert-ner",
         #evaluation_strategy="no",
