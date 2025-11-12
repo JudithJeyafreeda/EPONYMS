@@ -31,4 +31,4 @@ def bootstrap_metrics(true_labels, pred_labels, n_iterations=1000, alpha=0.05):
         "F1 CI": ci(f1s),
     }
 def bonferroni_threshold(alpha=0.05, comparisons=4):
-    return alpha / comparisons  # e.g., 0.0125 for 4 comparisons
+    return alpha / comparisons 
