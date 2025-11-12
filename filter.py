@@ -52,17 +52,16 @@ def save_filtered_eponyms(filtered_terms, output_path="filtered_eponyms.txt"):
             f.write(term + "\n")
 
 def main():
-    print("📥 Loading raw dictionary...")
+
     raw_terms = load_raw_dictionary("eponym_dictionary.txt")
-    print(f"🔎 Loaded {len(raw_terms)} terms.")
-
-    print("🧹 Applying strict filtering...")
+    
+    print(" Applying strict filtering...")
     filtered = filter_eponyms(raw_terms)
-    print(f"✅ Retained {len(filtered)} filtered eponyms.")
+    print(f"Retained {len(filtered)} filtered eponyms.")
 
-    print("💾 Saving to 'filtered_eponyms.txt'...")
+    
     save_filtered_eponyms(filtered)
-    print("🎉 Done.")
+    
 
 if __name__ == "__main__":
     main()
